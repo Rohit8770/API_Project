@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="20sp"
+    android:background="@drawable/tint1"
+    android:layout_height="match_parent"
+    tools:context=".Cat_and_Sub.Product.ProductFileActivity">
+
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="match_parent"
+        android:layout_marginTop="20sp"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="210sp"
+        android:id="@+id/CatSpinner"/>
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20sp"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+       android:layout_marginLeft="200sp"
+        android:id="@+id/SubSpinner"/>
+   <!-- <LinearLayout
+        android:layout_width="140sp"
+        android:layout_marginLeft="210sp"
+        android:layout_marginTop="@dimen/_169sdp"
+        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/SubSpinner"/>
+    </LinearLayout>-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="80sp"
+        android:background="@color/ss_border"
+        android:elevation="15sp"
+        app:cardCornerRadius="20sp">
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="5sp"
+            android:background="@color/white"
+            android:src="@drawable/search_24" />
+        <EditText
+            android:id="@+id/etSearchProduct"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginStart="35sp"
+            android:layout_marginEnd="35sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="35sp"
+            android:background="@color/white"
+            android:hint="Search_bar"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="140sp"
+        android:layout_height="wrap_content">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ProSearchbar"
+            android:id="@+id/subSwap"
+            tools:ignore="NotSibling">
+        <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:id="@+id/rcvProduct"
+        android:layout_marginLeft="5sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200sp" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15sp"
+        android:layout_marginLeft="270sp"
+        android:layout_marginTop="650sp"
+        android:elevation="10sp">
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_below="@+id/rcvProduct"
+        android:textSize="40sp"
+        android:text="+"
+        android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noDataFoundView"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No data found"
+        android:gravity="center"
+        />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
